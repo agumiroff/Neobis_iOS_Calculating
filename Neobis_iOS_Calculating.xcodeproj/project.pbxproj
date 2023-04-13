@@ -56,15 +56,95 @@
 		C6D62E7D29E8BC3300B33E9D /* Neobis_iOS_Calculating */ = {
 			isa = PBXGroup;
 			children = (
-				C6D62E7E29E8BC3300B33E9D /* AppDelegate.swift */,
-				C6D62E8029E8BC3300B33E9D /* SceneDelegate.swift */,
-				C6D62E8229E8BC3300B33E9D /* ViewController.swift */,
+				C6D62E9329E8BC4100B33E9D /* Core */,
+				C6D62E9229E8BC3800B33E9D /* Application */,
 				C6D62E8429E8BC3300B33E9D /* Main.storyboard */,
 				C6D62E8729E8BC3400B33E9D /* Assets.xcassets */,
 				C6D62E8929E8BC3400B33E9D /* LaunchScreen.storyboard */,
 				C6D62E8C29E8BC3400B33E9D /* Info.plist */,
 			);
 			path = Neobis_iOS_Calculating;
+			sourceTree = "<group>";
+		};
+		C6D62E9229E8BC3800B33E9D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C6D62E7E29E8BC3300B33E9D /* AppDelegate.swift */,
+				C6D62E8029E8BC3300B33E9D /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		C6D62E9329E8BC4100B33E9D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C6D62E9929E8BC7000B33E9D /* Data */,
+				C6D62E9429E8BC4B00B33E9D /* UI */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C6D62E9429E8BC4B00B33E9D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C6D62E9529E8BC4D00B33E9D /* AppScreen */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C6D62E9529E8BC4D00B33E9D /* AppScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C6D62E9629E8BC5B00B33E9D /* Model */,
+				C6D62E9729E8BC5E00B33E9D /* View */,
+				C6D62E9829E8BC6000B33E9D /* Controller */,
+			);
+			path = AppScreen;
+			sourceTree = "<group>";
+		};
+		C6D62E9629E8BC5B00B33E9D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C6D62E9729E8BC5E00B33E9D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C6D62E8229E8BC3300B33E9D /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C6D62E9829E8BC6000B33E9D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C6D62E9929E8BC7000B33E9D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C6D62E9A29E8BC7200B33E9D /* Router */,
+				C6D62E9B29E8BC7800B33E9D /* Builder */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C6D62E9A29E8BC7200B33E9D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		C6D62E9B29E8BC7800B33E9D /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Builder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
