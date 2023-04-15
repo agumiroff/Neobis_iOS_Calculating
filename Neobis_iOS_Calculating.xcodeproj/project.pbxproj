@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58748F7EB39E5439D2836AEE /* Pods_Neobis_iOS_Calculating.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55FD2E36539C35148993E23 /* Pods_Neobis_iOS_Calculating.framework */; };
 		C6D62E7F29E8BC3300B33E9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D62E7E29E8BC3300B33E9D /* AppDelegate.swift */; };
 		C6D62E8129E8BC3300B33E9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D62E8029E8BC3300B33E9D /* SceneDelegate.swift */; };
-		C6D62E8329E8BC3300B33E9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D62E8229E8BC3300B33E9D /* ViewController.swift */; };
-		C6D62E8629E8BC3300B33E9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D62E8429E8BC3300B33E9D /* Main.storyboard */; };
+		C6D62E8329E8BC3300B33E9D /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D62E8229E8BC3300B33E9D /* MainScreenViewController.swift */; };
 		C6D62E8829E8BC3400B33E9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6D62E8729E8BC3400B33E9D /* Assets.xcassets */; };
 		C6D62E8B29E8BC3400B33E9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D62E8929E8BC3400B33E9D /* LaunchScreen.storyboard */; };
+		C6D62EA029E9036600B33E9D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D62E9F29E9036600B33E9D /* Model.swift */; };
+		C6D62EA329E904D000B33E9D /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D62EA229E904D000B33E9D /* CustomButton.swift */; };
+		C6D62EA529E9EDA400B33E9D /* CustomStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D62EA429E9EDA400B33E9D /* CustomStack.swift */; };
+		C6D62EA729EA252C00B33E9D /* FirstRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D62EA629EA252C00B33E9D /* FirstRowView.swift */; };
+		C6D62EAA29EA2F6100B33E9D /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D62EA929EA2F6100B33E9D /* Constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A55FD2E36539C35148993E23 /* Pods_Neobis_iOS_Calculating.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neobis_iOS_Calculating.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A81557DFE851306167073CFF /* Pods-Neobis_iOS_Calculating.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_Calculating.debug.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_Calculating/Pods-Neobis_iOS_Calculating.debug.xcconfig"; sourceTree = "<group>"; };
 		C6D62E7B29E8BC3300B33E9D /* Neobis_iOS_Calculating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neobis_iOS_Calculating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D62E7E29E8BC3300B33E9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6D62E8029E8BC3300B33E9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C6D62E8229E8BC3300B33E9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C6D62E8529E8BC3300B33E9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C6D62E8229E8BC3300B33E9D /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		C6D62E8729E8BC3400B33E9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6D62E8A29E8BC3400B33E9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6D62E8C29E8BC3400B33E9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6D62E9F29E9036600B33E9D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C6D62EA229E904D000B33E9D /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		C6D62EA429E9EDA400B33E9D /* CustomStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStack.swift; sourceTree = "<group>"; };
+		C6D62EA629EA252C00B33E9D /* FirstRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRowView.swift; sourceTree = "<group>"; };
+		C6D62EA929EA2F6100B33E9D /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		EED253696DDE7B7A5E21DA63 /* Pods-Neobis_iOS_Calculating.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_Calculating.release.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_Calculating/Pods-Neobis_iOS_Calculating.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58748F7EB39E5439D2836AEE /* Pods_Neobis_iOS_Calculating.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B95D6D6C6A3ADF7D2CD1161 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A81557DFE851306167073CFF /* Pods-Neobis_iOS_Calculating.debug.xcconfig */,
+				EED253696DDE7B7A5E21DA63 /* Pods-Neobis_iOS_Calculating.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C6D62E7229E8BC3300B33E9D = {
 			isa = PBXGroup;
 			children = (
 				C6D62E7D29E8BC3300B33E9D /* Neobis_iOS_Calculating */,
 				C6D62E7C29E8BC3300B33E9D /* Products */,
+				3B95D6D6C6A3ADF7D2CD1161 /* Pods */,
+				E8B0FE0CEF40075A332C2A85 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +80,9 @@
 		C6D62E7D29E8BC3300B33E9D /* Neobis_iOS_Calculating */ = {
 			isa = PBXGroup;
 			children = (
+				C6D62E9E29E9021200B33E9D /* Resources */,
 				C6D62E9329E8BC4100B33E9D /* Core */,
 				C6D62E9229E8BC3800B33E9D /* Application */,
-				C6D62E8429E8BC3300B33E9D /* Main.storyboard */,
-				C6D62E8729E8BC3400B33E9D /* Assets.xcassets */,
-				C6D62E8929E8BC3400B33E9D /* LaunchScreen.storyboard */,
-				C6D62E8C29E8BC3400B33E9D /* Info.plist */,
 			);
 			path = Neobis_iOS_Calculating;
 			sourceTree = "<group>";
@@ -78,7 +99,7 @@
 		C6D62E9329E8BC4100B33E9D /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				C6D62E9929E8BC7000B33E9D /* Data */,
+				C6D62EA829EA2F5300B33E9D /* Helpers */,
 				C6D62E9429E8BC4B00B33E9D /* UI */,
 			);
 			path = Core;
@@ -87,6 +108,7 @@
 		C6D62E9429E8BC4B00B33E9D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C6D62EA129E904C200B33E9D /* Custom */,
 				C6D62E9529E8BC4D00B33E9D /* AppScreen */,
 			);
 			path = UI;
@@ -97,7 +119,6 @@
 			children = (
 				C6D62E9629E8BC5B00B33E9D /* Model */,
 				C6D62E9729E8BC5E00B33E9D /* View */,
-				C6D62E9829E8BC6000B33E9D /* Controller */,
 			);
 			path = AppScreen;
 			sourceTree = "<group>";
@@ -105,6 +126,7 @@
 		C6D62E9629E8BC5B00B33E9D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C6D62E9F29E9036600B33E9D /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -112,39 +134,45 @@
 		C6D62E9729E8BC5E00B33E9D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C6D62E8229E8BC3300B33E9D /* ViewController.swift */,
+				C6D62E8229E8BC3300B33E9D /* MainScreenViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		C6D62E9829E8BC6000B33E9D /* Controller */ = {
+		C6D62E9E29E9021200B33E9D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C6D62E8729E8BC3400B33E9D /* Assets.xcassets */,
+				C6D62E8929E8BC3400B33E9D /* LaunchScreen.storyboard */,
+				C6D62E8C29E8BC3400B33E9D /* Info.plist */,
 			);
-			path = Controller;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		C6D62E9929E8BC7000B33E9D /* Data */ = {
+		C6D62EA129E904C200B33E9D /* Custom */ = {
 			isa = PBXGroup;
 			children = (
-				C6D62E9A29E8BC7200B33E9D /* Router */,
-				C6D62E9B29E8BC7800B33E9D /* Builder */,
+				C6D62EA229E904D000B33E9D /* CustomButton.swift */,
+				C6D62EA429E9EDA400B33E9D /* CustomStack.swift */,
+				C6D62EA629EA252C00B33E9D /* FirstRowView.swift */,
 			);
-			path = Data;
+			path = Custom;
 			sourceTree = "<group>";
 		};
-		C6D62E9A29E8BC7200B33E9D /* Router */ = {
+		C6D62EA829EA2F5300B33E9D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C6D62EA929EA2F6100B33E9D /* Constraints.swift */,
 			);
-			path = Router;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
-		C6D62E9B29E8BC7800B33E9D /* Builder */ = {
+		E8B0FE0CEF40075A332C2A85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A55FD2E36539C35148993E23 /* Pods_Neobis_iOS_Calculating.framework */,
 			);
-			path = Builder;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +182,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6D62E8F29E8BC3400B33E9D /* Build configuration list for PBXNativeTarget "Neobis_iOS_Calculating" */;
 			buildPhases = (
+				55BC04508522F9DECF397892 /* [CP] Check Pods Manifest.lock */,
 				C6D62E7729E8BC3300B33E9D /* Sources */,
 				C6D62E7829E8BC3300B33E9D /* Frameworks */,
 				C6D62E7929E8BC3300B33E9D /* Resources */,
+				F183B813B295F3B607777C4B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,34 +237,72 @@
 			files = (
 				C6D62E8B29E8BC3400B33E9D /* LaunchScreen.storyboard in Resources */,
 				C6D62E8829E8BC3400B33E9D /* Assets.xcassets in Resources */,
-				C6D62E8629E8BC3300B33E9D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55BC04508522F9DECF397892 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Neobis_iOS_Calculating-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F183B813B295F3B607777C4B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neobis_iOS_Calculating/Pods-Neobis_iOS_Calculating-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neobis_iOS_Calculating/Pods-Neobis_iOS_Calculating-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neobis_iOS_Calculating/Pods-Neobis_iOS_Calculating-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C6D62E7729E8BC3300B33E9D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6D62E8329E8BC3300B33E9D /* ViewController.swift in Sources */,
+				C6D62E8329E8BC3300B33E9D /* MainScreenViewController.swift in Sources */,
 				C6D62E7F29E8BC3300B33E9D /* AppDelegate.swift in Sources */,
 				C6D62E8129E8BC3300B33E9D /* SceneDelegate.swift in Sources */,
+				C6D62EA529E9EDA400B33E9D /* CustomStack.swift in Sources */,
+				C6D62EAA29EA2F6100B33E9D /* Constraints.swift in Sources */,
+				C6D62EA029E9036600B33E9D /* Model.swift in Sources */,
+				C6D62EA329E904D000B33E9D /* CustomButton.swift in Sources */,
+				C6D62EA729EA252C00B33E9D /* FirstRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C6D62E8429E8BC3300B33E9D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C6D62E8529E8BC3300B33E9D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C6D62E8929E8BC3400B33E9D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -362,18 +430,18 @@
 		};
 		C6D62E9029E8BC3400B33E9D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A81557DFE851306167073CFF /* Pods-Neobis_iOS_Calculating.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Neobis_iOS_Calculating/Info.plist;
+				INFOPLIST_FILE = Neobis_iOS_Calculating/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -389,18 +457,18 @@
 		};
 		C6D62E9129E8BC3400B33E9D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EED253696DDE7B7A5E21DA63 /* Pods-Neobis_iOS_Calculating.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Neobis_iOS_Calculating/Info.plist;
+				INFOPLIST_FILE = Neobis_iOS_Calculating/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

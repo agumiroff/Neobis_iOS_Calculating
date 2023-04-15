@@ -1,0 +1,6 @@
+framework module Pods_Neobis_iOS_Calculating {
+  umbrella header "Pods-Neobis_iOS_Calculating-umbrella.h"
+
+  export *
+  module * { export * }
+}
