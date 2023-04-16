@@ -18,6 +18,7 @@
 		C6D62EA529E9EDA400B33E9D /* CustomStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D62EA429E9EDA400B33E9D /* CustomStack.swift */; };
 		C6D62EA729EA252C00B33E9D /* FirstRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D62EA629EA252C00B33E9D /* FirstRowView.swift */; };
 		C6D62EAA29EA2F6100B33E9D /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D62EA929EA2F6100B33E9D /* Constraints.swift */; };
+		C6D62EAF29EAED0200B33E9D /* ButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D62EAE29EAED0200B33E9D /* ButtonModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		C6D62EA429E9EDA400B33E9D /* CustomStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStack.swift; sourceTree = "<group>"; };
 		C6D62EA629EA252C00B33E9D /* FirstRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRowView.swift; sourceTree = "<group>"; };
 		C6D62EA929EA2F6100B33E9D /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		C6D62EAE29EAED0200B33E9D /* ButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModel.swift; sourceTree = "<group>"; };
 		EED253696DDE7B7A5E21DA63 /* Pods-Neobis_iOS_Calculating.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_Calculating.release.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_Calculating/Pods-Neobis_iOS_Calculating.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				C6D62E9F29E9036600B33E9D /* Model.swift */,
+				C6D62EAE29EAED0200B33E9D /* ButtonModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6D62E8F29E8BC3400B33E9D /* Build configuration list for PBXNativeTarget "Neobis_iOS_Calculating" */;
 			buildPhases = (
+				C6D62EB629EC6C1B00B33E9D /* ShellScript */,
 				55BC04508522F9DECF397892 /* [CP] Check Pods Manifest.lock */,
 				C6D62E7729E8BC3300B33E9D /* Sources */,
 				C6D62E7829E8BC3300B33E9D /* Frameworks */,
@@ -193,6 +197,8 @@
 			dependencies = (
 			);
 			name = Neobis_iOS_Calculating;
+			packageProductDependencies = (
+			);
 			productName = Neobis_iOS_Calculating;
 			productReference = C6D62E7B29E8BC3300B33E9D /* Neobis_iOS_Calculating.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +227,8 @@
 				Base,
 			);
 			mainGroup = C6D62E7229E8BC3300B33E9D;
+			packageReferences = (
+			);
 			productRefGroup = C6D62E7C29E8BC3300B33E9D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -265,6 +273,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C6D62EB629EC6C1B00B33E9D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
 		F183B813B295F3B607777C4B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -294,6 +320,7 @@
 				C6D62E8129E8BC3300B33E9D /* SceneDelegate.swift in Sources */,
 				C6D62EA529E9EDA400B33E9D /* CustomStack.swift in Sources */,
 				C6D62EAA29EA2F6100B33E9D /* Constraints.swift in Sources */,
+				C6D62EAF29EAED0200B33E9D /* ButtonModel.swift in Sources */,
 				C6D62EA029E9036600B33E9D /* Model.swift in Sources */,
 				C6D62EA329E904D000B33E9D /* CustomButton.swift in Sources */,
 				C6D62EA729EA252C00B33E9D /* FirstRowView.swift in Sources */,
@@ -364,7 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -418,7 +445,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -440,8 +467,8 @@
 				INFOPLIST_FILE = Neobis_iOS_Calculating/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,8 +494,8 @@
 				INFOPLIST_FILE = Neobis_iOS_Calculating/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

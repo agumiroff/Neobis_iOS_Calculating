@@ -6,7 +6,7 @@ target 'Neobis_iOS_Calculating' do
   use_frameworks!
 
   # Pods for Neobis_iOS_Calculating
-
+pod 'SwiftLint'
 pod 'SnapKit'
 
 end

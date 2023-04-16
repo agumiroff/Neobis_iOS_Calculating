@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 class CustomStackView: UIStackView {
-    init(subViews: [UIView]) {
+    init(subViews: [UIView], axis: NSLayoutConstraint.Axis) {
         super.init(frame: CGRect())
-        self.axis = .horizontal
+        self.axis = axis
         self.distribution = .fillEqually
         self.spacing = 5
         subViews.forEach { view in

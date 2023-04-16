@@ -17,21 +17,23 @@ class CustomButton: UIButton {
          textColor: UIColor,
          operation: Operations,
          value: String) {
-        
         self.operation = operation
         self.value = value
         super.init(frame: CGRect())
+        
         self.setTitle(value, for: .normal)
         let attributedTitle = NSMutableAttributedString(string: value)
-        attributedTitle.addAttribute(.font, value: UIFont(name: "Helvetica-Bold", size: 30) as Any, range: NSMakeRange(0, attributedTitle.length))
+        let range = NSRange(location: 0, length: attributedTitle.length)
+        attributedTitle.addAttribute(.font, value: UIFont(name: "Helvetica-Bold", size: 30) as Any, range: range)
         self.setAttributedTitle(attributedTitle, for: .normal)
-        var configuration = UIButton.Configuration.filled()
-        configuration.baseBackgroundColor = buttonColor
-        configuration.baseForegroundColor = textColor
-        configuration.cornerStyle = .capsule
-        configuration.image = UIImage(systemName: imageName)
-        configuration.preferredSymbolConfigurationForImage = .init(font: UIFont(name: "Helvetica-Bold", size: 30)!, scale: .default)
-        self.configuration = configuration
+        titleLabel?.textColor = textColor
+        tintColor = textColor
+        backgroundColor = buttonColor
+        layer.cornerRadius = (Constraints.screenWidth * 0.25 - 5)/2
+        
+        let config = UIImage.SymbolConfiguration(font: UIFont(name: "Helvetica-Bold", size: 30)!)
+        let image = UIImage(systemName: imageName, withConfiguration: config)
+        setImage(image, for: .normal)
     }
     
     required init?(coder: NSCoder) {

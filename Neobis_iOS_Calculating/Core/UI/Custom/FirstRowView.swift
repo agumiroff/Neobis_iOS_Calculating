@@ -8,14 +8,13 @@
 import Foundation
 import UIKit
 
-
 class FirstRowView: UIView {
     
     var zeroButton = CustomButton(imageName: Data.arrayOfButtons[0].imageName,
                                   buttonColor: Data.arrayOfButtons[0].backgroundColor,
-                                  textColor: Data.arrayOfButtons[0].foregroundColor,
+                                  textColor: .clear,
                                   operation: Data.arrayOfButtons[0].operation ?? .empty,
-                                  value: "")
+                                  value: Data.arrayOfButtons[0].value ?? "0")
     
     var commaButton = CustomButton(imageName: Data.arrayOfButtons[1].imageName,
                                    buttonColor: Data.arrayOfButtons[1].backgroundColor,
@@ -32,8 +31,8 @@ class FirstRowView: UIView {
     let label: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Helvetica-Bold", size: 30)
-        label.text = "0"
         label.textColor = .white
+        label.text = "0"
         label.textAlignment = .center
         return label
     }()
@@ -53,6 +52,7 @@ class FirstRowView: UIView {
         addSubview(calculateButton)
         
         zeroButton.addSubview(label)
+        
         label.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.width.equalTo(Constraints.screenWidth * 0.25 - 5)

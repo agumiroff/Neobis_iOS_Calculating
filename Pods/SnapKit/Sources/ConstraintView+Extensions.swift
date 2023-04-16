@@ -50,7 +50,6 @@ public extension ConstraintView {
     
     @available(*, deprecated, renamed:"snp.width")
     var snp_width: ConstraintItem { return self.snp.width }
-    
     @available(*, deprecated, renamed:"snp.height")
     var snp_height: ConstraintItem { return self.snp.height }
     
