@@ -15,7 +15,11 @@ struct CalculatorModel {
         }
         
         set {
-            self.roundedResult = Double(round(newValue * 1000) / 1000)
+            if roundedResult > 1 {
+                self.roundedResult = Double(round(newValue * 1000) / 1000)
+            } else {
+                self.roundedResult = Double(round(newValue * 1000000) / 1000000)
+            }
         }
     }
     var value: Double
