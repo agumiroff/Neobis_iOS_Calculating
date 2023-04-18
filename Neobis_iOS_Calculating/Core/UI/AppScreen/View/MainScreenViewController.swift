@@ -22,19 +22,19 @@ class MainScreenViewController: UIViewController {
     private let label: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.font = UIFont(name: "Helvetica", size: 55)
-        label.text = "FFF"
+        label.font = UIFont(name: "Helvetica", size: 100)
+        label.textAlignment = .right
+        label.lineBreakMode = .byWordWrapping
         return label
     }()
     
     @Published private var textResult = "0"
     private var state: State = .initial
-    private var calcModel = CalculatorModel(result: .nan, value: .nan, operation: .empty)
+    private var calcModel = CalculatorModel(roundedResult: .nan, value: .nan, operation: .empty)
     private let row = FirstRowView()
     private lazy var buttons = [CustomButton]()
     private lazy var stacks = [UIView]()
     private lazy var index = 0
-    private lazy var operation: Operations = .empty
     private lazy var cancellables = Set<AnyCancellable>()
     
     // MARK: - ViewDidLoad
@@ -57,7 +57,7 @@ class MainScreenViewController: UIViewController {
         view.addSubview(mainStack)
         
         label.snp.makeConstraints { make in
-            make.right.equalToSuperview()
+            make.right.left.equalToSuperview()
             make.bottom.equalTo(mainStack.snp.top)
         }
         
@@ -156,21 +156,50 @@ class MainScreenViewController: UIViewController {
     }
     
 }
-// MARK: - Business logic component
+// MARK: - Business logic
 extension MainScreenViewController {
     
     @objc private func buttonDidTap(sender: CustomButton) {
-        
+        if state == .initial { state = .waitForNewValue }
         if sender.operation == .empty {
-            textResult = state == .waitForNewValue ? sender.value : textResult + sender.value
+            numbersInput(value: sender.value)
+            
             state = .waitForOperation
             unblockAllButtons()
         }
         
         if sender.operation != .empty {
-            let value = Double(textResult) ?? 0
+            operationInput(sender: sender)
+    }
+    
+    }
+    
+    private func numbersInput(value: String) {
+        switch value {
+            
+        case "0":
+            if textResult == "0" {
+                textResult += ",0"
+            } else {
+                textResult = state == .waitForNewValue ? "\(value)" : textResult + value
+            }
+            
+        case ",":
+            if textResult.contains(",") {
+                return
+            } else {
+                textResult = state == .waitForNewValue ? "0\(value)" : textResult + value
+            }
+            
+        default:
+            textResult = state == .waitForNewValue ? value : textResult + value
+        }
+    }
+        
+        private func operationInput(sender: CustomButton) {
+            let value = convertValue(from: textResult, toType: Double.self)
+            
             switch sender.operation {
-                
             case .reset:
                 unblockAllButtons()
                 calcModel.result = .nan
@@ -179,10 +208,16 @@ extension MainScreenViewController {
                 state = .waitForNewValue
                 
             case .negative:
+                if textResult == "0" { return }
                 calcModel.result = value
                 calculate(with: -1, operation: .multiplication)
                 
+            case .percent:
+                calcModel.result = convertValue(from: textResult, toType: Double.self)
+                calculate(with: 100, operation:
+                        .division)
             case .calculate:
+                if calcModel.result.isNaN { return }
                 if state == .calculating {
                     calculate(with: calcModel.value,
                               operation: calcModel.operation)
@@ -208,15 +243,14 @@ extension MainScreenViewController {
                 if calcModel.result.isNaN {
                     calcModel.result = value
                     calcModel.operation = sender.operation
+                    
                 } else {
                     calculate(with: value, operation: calcModel.operation)
                     calcModel.operation = sender.operation
                 }
                 state = .waitForNewValue
             }
-            
         }
-    }
     
     private func calculate(with newValue: Double, operation: Operations) {
         
@@ -229,13 +263,40 @@ extension MainScreenViewController {
             calcModel.result -= newValue
         case .addition:
             calcModel.result += newValue
-        case .percent:
-            break
         default:
             break
         }
-        textResult = String(calcModel.result)
+        textResult = convertValue(from: calcModel.result, toType: String.self)
     }
+    
+    private func convertValue<T1, T2>(from: T1, toType: T2.Type) -> T2 {
+        let formatter = NumberFormatter()
+        formatter.decimalSeparator = ","
+        var temp = ""
+        let replaceChar: Character = toType is Double.Type ? "," : "."
+        let replaceOnChar = toType is Double.Type ? "." : ","
+        let value = toType is Double.Type ? from as? String ?? "" :
+        String(from as? Double ?? 0.0)
+        if value.contains(replaceChar) {
+            value.forEach { char in
+                temp = char == replaceChar ? String(temp + replaceOnChar) :
+                temp + String(char)
+            }
+            if toType is Double.Type {
+                return (Double(temp) as? T2)!
+            } else {
+                return (temp as? T2)!
+            }
+        } else {
+            if toType is Double.Type {
+                return (Double(value) as? T2)!
+            } else {
+                
+                return (value as? T2)!
+            }
+        }
+    }
+    
 }
 
 enum Operations: Int {

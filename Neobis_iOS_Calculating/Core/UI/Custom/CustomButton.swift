@@ -28,7 +28,7 @@ class CustomButton: UIButton {
         self.setAttributedTitle(attributedTitle, for: .normal)
         titleLabel?.textColor = textColor
         tintColor = textColor
-        backgroundColor = buttonColor
+        backgroundColor = isTouchInside ? .white : buttonColor
         layer.cornerRadius = (Constraints.screenWidth * 0.25 - 5)/2
         
         let config = UIImage.SymbolConfiguration(font: UIFont(name: "Helvetica-Bold", size: 30)!)

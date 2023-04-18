@@ -8,7 +8,16 @@
 import Foundation
 
 struct CalculatorModel {
-    var result: Double
+    var roundedResult: Double
+    var result: Double {
+        get {
+            return self.roundedResult
+        }
+        
+        set {
+            self.roundedResult = Double(round(newValue * 1000) / 1000)
+        }
+    }
     var value: Double
     var operation: Operations
 }
